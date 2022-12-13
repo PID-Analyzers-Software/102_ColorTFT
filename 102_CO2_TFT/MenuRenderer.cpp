@@ -393,7 +393,7 @@ void TFTRunMenuRenderer::render(Menu* menu)
 
   m_display->setTextSize(2);           // We are using a text size multiplier of 1
   // The new larger fonts do not need to use the .setCursor call, coords are embedded
-  m_display->setTextColor(TFT_RED); // Do not plot the background colour
+  m_display->setTextColor(TFT_RED,TFT_BLACK); // Do not plot the background colour
   // Overlay the black text on top of the rainbow plot (the advantage of not drawing the backgorund colour!)
   m_display->setCursor(50, 14, 2);    // Set cursor to x = 76, y = 150 and use font 4
   m_display->println(String(timeString));       // Draw text centre at position 120, 54 using font 6    m_display->setTextColor(TFT_GREEN, TFT_BLACK);  // Set text colour to white and background to black
@@ -421,8 +421,8 @@ void TFTRunMenuRenderer::render(Menu* menu)
   m_display->setTextColor(TFT_YELLOW, TFT_BLACK);
 
   m_display->drawRightString(String(String(m_dataSource->getRawMiliVolts())).c_str(), 230, 90, 4);       // Draw text centre at position 120, 54 using font 6
-  m_display->drawRightString(String(String(m_dataSource->getRawMiliVolts()+23)).c_str(),230, 135, 4);       // Draw text centre at position 120, 54 using font 6
-  m_display->drawRightString(String(String(m_dataSource->getRawMiliVolts()/10.1)).c_str(),230, 180, 4);       // Draw text centre at position 120, 54 using font 6
+  m_display->drawRightString(String(String(530+m_dataSource->getRawMiliVolts()/100)).c_str(),230, 135, 4);       // Draw text centre at position 120, 54 using font 6
+  m_display->drawRightString(String(String(m_dataSource->getRawMiliVolts()/10.1,1)).c_str(),230, 180, 4);       // Draw text centre at position 120, 54 using font 6
   m_display->drawRightString("1.7",230, 225, 4);       // Draw text centre at position 120, 54 using font 6
   m_display->drawRightString("0.9",230, 270, 4);       // Draw text centre at position 120, 54 using font 6
 
