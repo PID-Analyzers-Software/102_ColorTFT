@@ -2,7 +2,7 @@
 
 102 multi-channel analyzer prototype with TFT colored display.
 
-![5b8ffbd3953b4bff04636ca382a3659](https://user-images.githubusercontent.com/26637782/207245395-03256b1a-f074-4640-8f07-6ce0956785d7.jpg)
+![87ccd79d933e247fdd60486e2e4c18f](https://user-images.githubusercontent.com/26637782/207246660-da2a5398-a32a-47bd-a37f-095bc316858f.jpg)
 
 ## Pin Connection:
 - #define TFT_MISO 19 // (leave TFT SDO disconnected if other SPI devices share MISO)
